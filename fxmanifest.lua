@@ -1,7 +1,10 @@
-fx_version 'adamant'
-games { 'gta5' }
+fx_version 'cerulean'
+games      { 'gta5' }
+lua54 'yes'
 
---client_script "@np-errorlog/client/cl_errorlog.lua"
+author 'Vank1ta Scripts | 𝘃𝗮𝗻𝗸𝟭𝘁𝗮#9391'
+description 'Vank1ta New TaskBar'
+version '1.0.1'
 
 ui_page 'index.html'
 

@@ -34,7 +34,7 @@ $(document).ready(function(){
 
     if(item.closeFail === true) {
       closeMain()
-      $.post('http://vank1ta-taskbar/taskCancel', JSON.stringify({tasknum: curTask}));
+      $.post('https://vt-taskbar/taskCancel', JSON.stringify({tasknum: curTask}));
     }
 
     if(item.closeProgress === true) {
