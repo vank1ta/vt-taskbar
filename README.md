@@ -1,9 +1,11 @@
-# vank1ta-taskbar
-I'm attaching the resource here because it's mainly used in many of my resources that depend on it.
+# vt-taskbar
+Entirely my personal design. I will share it with everyone. I made the changes today. I also left the old version of the bar. This bar is used in all my scripts.
+
+![image](https://i.imgur.com/MbihqVP.png)
+
+**The script also works for ESX / QBCore / NP-base**
 
 **exports**
 ```
 exports['vank1ta-taskbar']:taskBar(time, "text")
 ```
-
-![image](https://user-images.githubusercontent.com/76558663/163754807-ffddf75b-5d25-418c-8043-92a9bbc97fb7.png)
