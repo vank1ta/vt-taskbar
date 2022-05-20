@@ -7,5 +7,5 @@ Entirely my personal design. I will share it with everyone. I made the changes t
 
 **exports**
 ```
-exports['vank1ta-taskbar']:taskBar(time, "text")
+exports['vt-taskbar']:taskBar(time, "text")
 ```
