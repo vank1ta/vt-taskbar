@@ -9,7 +9,7 @@ Put the .ogg files in your interact-sound/main/html/sounds folder!
 Restart your Server
 Have Fun!
 
-**exports**
+# Exports
 ```
 exports['vank1ta-taskbar']:taskBar(time, "text")
 ```
