@@ -1,11 +1,22 @@
-# vt-taskbar
-Entirely my personal design. I will share it with everyone. I made the changes today. I also left the old version of the bar. This bar is used in all my scripts.
+# VT 'Vank1ta' Development's
 
-![image](https://i.imgur.com/MbihqVP.png)
+The new version of the taskbar has been changed with sound and animation
 
-**The script also works for ESX / QBCore / NP-base**
+
+# Installing
+Put the script inside your resources folder and ensure it in the Server.cfg with "ensure vt-taskbar"
+Put the .ogg files in your interact-sound/main/html/sounds folder!
+Restart your Server
+Have Fun!
 
 **exports**
 ```
-exports['vt-taskbar']:taskBar(time, "text")
+exports['vank1ta-taskbar']:taskBar(time, "text")
 ```
+
+# Dependencies
+interact-sound - https://github.com/plunkettscott/interact-sound
+original created css - https://github.com/BubbleDudeAT/Progressbar-css-edit
+
+# Video
+https://streamable.com/tt9zp5

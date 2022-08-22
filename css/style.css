@@ -1,46 +1,73 @@
 @import "compass/css3";
 .nicesexytext {
-  color: white; 
-  z-index: 3; 
-  position: absolute; 
-  top: 81%;
-  left: 0; 
-  width: 100%; 
-  height: 10%;
-  text-align: center; 
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  text-shadow: 1px 1px 1px #000000ab;
-  margin-top: 2px;
-  overflow: hidden;
+  width: 15%;
+  height: 4vh;
+  line-height: 4vh;
+  text-align: center;
+  position: fixed;
+  bottom: 20;
+  right: 0;
+  white-space: nowrap;
+  font-size: 1.7vh;
+  color: #ffffff;
+  z-index: 10;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  animation: gelatine 0.6s;
+  transform: perspective(1em) rotateZ(-4deg);
+  left:10%;
+}
+
+@keyframes gelatine {
+  from, to { transform: scale(1, 1) perspective(1em) rotateZ(-4deg); }
+  25% { transform: scale(0.6, 1.3) perspective(1em) rotateZ(-4deg); }
+  50% { transform: scale(1.3, 0.6) perspective(1em) rotateZ(-4deg); }
+  75% { transform: scale(1.1, 1) perspective(1em) rotateZ(-4deg); }
+  100% { transform: scale(1, 1) perspective(1em) rotateZ(-4deg); }
 }
 
 .divwrap {
-	display:none;
-  margin-left:auto;
-  margin-right:auto;
-  width:15%;
-  height:1%;
-  margin-top:48%;
-  color:rgb(58, 55, 55);
-  background-color: rgba(49, 47, 47, 0.4);
-  border-radius: 5px;
-  border: 1px solid #fff;
-  overflow: hidden;
+  width: 15%;
+  height: 1.5vh;
+  background: rgba(0, 0, 0, 0.246);
+  position: fixed;
+  display: none;
+  white-space: nowrap;
+  border-radius: 6px;
+  animation: gelatine 0.6s;
+  transform: perspective(1em) rotateZ(-4deg);
+  margin-top:51%;
+  left:40%;
 }
+
 .progress {
   width: 100%;
   height: 5%;
 }
 
 .progress-wrap {
-  height: 100%;
-  overflow: hidden;
+  width: 100%;
+  height: 1.5vh;
+  background: rgba(0, 0, 0, 0.246);
+  text-align: left;
   position: relative;
+  display: block;
+  white-space: nowrap;
+  border-radius: 6px;
+
+  animation: gelatine 0.6s;
+  transform: perspective(1em) rotateZ(-4deg);
 }
 
 #progress-bar {
-  background: -webkit-linear-gradient(70deg, #7700ff 40%, #540099 40%);
-  z-index: 2; 
-  height: 100%; 
+
+  background: -webkit-linear-gradient(70deg, #7700ff 40%, #540099 40%) !important;
   width: 0%;
+  height: 1.5vh;
+  transition: width 0.3s;
+  transition-timing-function: ease-out;
+  box-shadow: 0 0 1em 0 #540099;
+  border-radius: 6px;
+
+  animation: gelatine 0.6s;
 }

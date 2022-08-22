@@ -32,6 +32,7 @@ RegisterNUICallback('taskCancel', function(data, cb)
   closeGui()
   local taskIdentifier = data.tasknum
   activeTasks[taskIdentifier] = 2
+  TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 5.0, 'vtbarcancel', 0.7)
 end)
 
 RegisterNUICallback('taskEnd', function(data, cb)
@@ -60,7 +61,6 @@ AddEventHandler('coffee:drink', function()
 
 end)
 
-
 -- command is something we do in the loop if we want to disable more, IE a vehicle engine.
 -- return true or false, if false, gives the % completed.
 local taskInProcess = false
@@ -69,6 +69,7 @@ function taskBar(length,name,runCheck,keepWeapon,vehicle,vehCheck)
     if taskInProcess then
         return 0
     end
+    TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 5.0, 'vtbar', 0.7)
     if coffeetimer > 0 then
         length = math.ceil(length * 0.66)
     end
@@ -76,7 +77,6 @@ function taskBar(length,name,runCheck,keepWeapon,vehicle,vehCheck)
     local taskIdentifier = "taskid" .. math.random(1000000)
     openGui(length,taskIdentifier,name,keepWeapon)
     activeTasks[taskIdentifier] = 1
-
     local maxcount = GetGameTimer() + length
     local curTime
     while activeTasks[taskIdentifier] == 1 do
@@ -88,7 +88,6 @@ function taskBar(length,name,runCheck,keepWeapon,vehicle,vehCheck)
         local fuck = 100 - (((maxcount - curTime) / length) * 100)
         fuck = math.min(100, fuck)
         updateGui(fuck,taskIdentifier,name)
-
         if runCheck then
             if IsPedClimbing(PlayerPedId()) or IsPedJumping(PlayerPedId()) or IsPedSwimming(PlayerPedId()) then
                 SetPlayerControl(PlayerId(), 0, 0)
@@ -102,7 +101,6 @@ function taskBar(length,name,runCheck,keepWeapon,vehicle,vehCheck)
                 return totaldone
             end
         end
-
         if vehicle ~= nil and vehicle ~= 0 then
             local driverPed = GetPedInVehicleSeat(vehicle, -1)
             if driverPed ~= playerPed and vehCheck then
@@ -116,7 +114,6 @@ function taskBar(length,name,runCheck,keepWeapon,vehicle,vehCheck)
                 Citizen.Wait(1000)
                 return totaldone
             end
-
             local model = GetEntityModel(playerVeh)
             if IsThisModelACar(model) or IsThisModelABike(model) or IsThisModelAQuadbike(model) then
                 if IsEntityInAir(vehicle) then
@@ -133,7 +130,6 @@ function taskBar(length,name,runCheck,keepWeapon,vehicle,vehCheck)
             end
         end
     end
-
     local resultTask = activeTasks[taskIdentifier]
     if resultTask == 2 then
         local totaldone = math.ceil(100 - (((maxcount - curTime) / length) * 100))
@@ -146,7 +142,6 @@ function taskBar(length,name,runCheck,keepWeapon,vehicle,vehCheck)
         taskInProcess = false
         return 100
     end 
-   
 end
 
 function CheckCancels()
@@ -181,3 +176,8 @@ AddEventHandler('event:control:taskBar', function(useID)
         closeGuiFail() 
     end
 end)
+ 
+-- 👀 Test Task Bar
+-- RegisterCommand("vtbar", function()
+--     exports['vt-taskbar']:taskBar(10000, "New version VT Taskbar")
+-- end, true)
