@@ -16,6 +16,7 @@ exports['vank1ta-taskbar']:taskBar(time, "text")
 
 # Dependencies
 interact-sound - https://github.com/plunkettscott/interact-sound
+
 original created css - https://github.com/BubbleDudeAT/Progressbar-css-edit
 
 # Video
