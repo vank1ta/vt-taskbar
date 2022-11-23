@@ -11,7 +11,7 @@ Have Fun!
 
 # Exports
 ```
-exports['vank1ta-taskbar']:taskBar(time, "text")
+exports['vt-taskbar']:taskBar(time, "text")
 ```
 
 # Dependencies
