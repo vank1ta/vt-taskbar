@@ -1,46 +1,47 @@
-$(document).ready(function(){
-  
-  var documentWidth = document.documentElement.clientWidth;
-  var documentHeight = document.documentElement.clientHeight;
-  var curTask = 0;
-  var processed = []
-  function openMain() {
-    $(".divwrap").fadeIn(10);
-  }
+$(document).ready(function() {
 
-  function closeMain() {
-    $(".divwrap").css("display", "none");
-  }  
+    var documentWidth = document.documentElement.clientWidth;
+    var documentHeight = document.documentElement.clientHeight;
+    var curTask = 0;
+    var processed = []
 
-  window.addEventListener('message', function(event){
-
-    var item = event.data;
-    if(item.runProgress === true) {
-      openMain();
-
-      $('#progress-bar').css("width","0%");
-      $(".nicesexytext").empty();
-      $('.nicesexytext').append(item.name);
+    function openMain() {
+        $(".divwrap").fadeIn(10);
     }
 
-    if(item.runUpdate === true) {
-
-      var percent = "" + item.Length + "%"
-      $('#progress-bar').css("width",percent);
-
-      $(".nicesexytext").empty();
-      $('.nicesexytext').append(item.name);
+    function closeMain() {
+        $(".divwrap").css("display", "none");
     }
 
-    if(item.closeFail === true) {
-      closeMain()
-      $.post('https://vt-taskbar/taskCancel', JSON.stringify({tasknum: curTask}));
-    }
+    window.addEventListener('message', function(event) {
 
-    if(item.closeProgress === true) {
-      closeMain();
-    }
+        var item = event.data;
+        if (item.runProgress === true) {
+            openMain();
 
-  });
+            $('#progress-bar').css("width", "0%");
+            $(".nicesexytext").empty();
+            $('.nicesexytext').append(item.name);
+        }
+
+        if (item.runUpdate === true) {
+
+            var percent = "" + item.Length + "%"
+            $('#progress-bar').css("width", percent);
+
+            $(".nicesexytext").empty();
+            $('.nicesexytext').append(item.name);
+        }
+
+        if (item.closeFail === true) {
+            closeMain()
+            $.post('https://vt-taskbar/taskCancel', JSON.stringify({ tasknum: curTask }));
+        }
+
+        if (item.closeProgress === true) {
+            closeMain();
+        }
+
+    });
 
 });

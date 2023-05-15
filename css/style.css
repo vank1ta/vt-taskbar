@@ -1,73 +1,68 @@
-@import "compass/css3";
 .nicesexytext {
-  width: 15%;
-  height: 4vh;
-  line-height: 4vh;
-  text-align: center;
-  position: fixed;
-  bottom: 20;
-  right: 0;
-  white-space: nowrap;
-  font-size: 1.7vh;
-  color: #ffffff;
-  z-index: 10;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
-  animation: gelatine 0.6s;
-  transform: perspective(1em) rotateZ(-4deg);
-  left:10%;
-}
-
-@keyframes gelatine {
-  from, to { transform: scale(1, 1) perspective(1em) rotateZ(-4deg); }
-  25% { transform: scale(0.6, 1.3) perspective(1em) rotateZ(-4deg); }
-  50% { transform: scale(1.3, 0.6) perspective(1em) rotateZ(-4deg); }
-  75% { transform: scale(1.1, 1) perspective(1em) rotateZ(-4deg); }
-  100% { transform: scale(1, 1) perspective(1em) rotateZ(-4deg); }
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 0;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #e6e6e5;
+    width: 100%;
+    opacity: 1;
+    margin-top: -8.7%;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    /* font-size:16px;
+  */
+    font-weight: 600;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    /* text-shadow: 1px 1px 1px rgba(1,1,1,1);
+  */
+    position: relative;
+    z-index: 99;
+    text-shadow: #00000069 -1px 0.5px 0px, #00000069 1px 1px 0px, #00000069 1px -1px 0px, #00000069 -1px -1px 0px;
 }
 
 .divwrap {
-  width: 15%;
-  height: 1.5vh;
-  background: rgba(0, 0, 0, 0.246);
-  position: fixed;
-  display: none;
-  white-space: nowrap;
-  border-radius: 6px;
-  animation: gelatine 0.6s;
-  transform: perspective(1em) rotateZ(-4deg);
-  margin-top:51%;
-  left:40%;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    height: 3.2%;
+    margin-top: 48%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid #e6e6e5;
 }
 
 .progress {
-  width: 100%;
-  height: 5%;
+    width: 100%;
+    height: 100%;
 }
 
 .progress-wrap {
-  width: 100%;
-  height: 1.5vh;
-  background: rgba(0, 0, 0, 0.246);
-  text-align: left;
-  position: relative;
-  display: block;
-  white-space: nowrap;
-  border-radius: 6px;
-
-  animation: gelatine 0.6s;
-  transform: perspective(1em) rotateZ(-4deg);
+    height: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 #progress-bar {
-
-  background: -webkit-linear-gradient(70deg, #7700ff 40%, #540099 40%) !important;
-  width: 0%;
-  height: 1.5vh;
-  transition: width 0.3s;
-  transition-timing-function: ease-out;
-  box-shadow: 0 0 1em 0 #540099;
-  border-radius: 6px;
-
-  animation: gelatine 0.6s;
+    /* margin:1px;
+  */
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #4f7cac;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    -webkit-animation: animate-stripes 3s linear infinite;
+    transition: width 0.3s;
+    transition-timing-function: ease-out;
+    z-index: 98;
+    background-position: 20px 0;
 }
