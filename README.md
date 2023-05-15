@@ -1,3 +1,18 @@
+<div align="center">
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+![version](https://img.shields.io/badge/version-1.0.3-blue)
+[![](https://dcbadge.vercel.app/api/server/Dnthwv6xkE)](https://discord.gg/Dnthwv6xkE)
+
+</div>
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/vank1ta/vt-taskbar.svg?style=for-the-badge
+[contributors-url]: https://github.com/vank1ta/vt-taskbar/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/vank1ta/vt-taskbar.svg?style=for-the-badge
+[forks-url]: https://github.com/vank1ta/vt-taskbar/network/members
+
 # VT 'Vank1ta' Development's
 
 The new version of the taskbar has been changed with sound and animation
