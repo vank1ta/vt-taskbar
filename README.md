@@ -2,8 +2,8 @@
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
+[![](https://dcbadge.vercel.app/api/server/Dnthwv6xkE)](https://discord.gg/Dnthwv6xkE) <br />
 ![version](https://img.shields.io/badge/version-1.0.3-blue)
-[![](https://dcbadge.vercel.app/api/server/Dnthwv6xkE)](https://discord.gg/Dnthwv6xkE)
 
 </div>
 
